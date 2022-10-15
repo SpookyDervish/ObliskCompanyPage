@@ -198,8 +198,8 @@ button:focus {
 }
 
 
-/* !==== LOGIN STUFF ====! */
-.container {
+/* *==== LOGIN / SIGNUP ====* */
+.login-container {
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -341,12 +341,92 @@ form a:hover {
 	color: var(--link-hover);
 }
 
-.footer {
-    text-align: center;
-    padding: 20px 0;
-    color: var(--text-gray);
-    font-size: 1.2rem;
+
+/* *==== FOOTER ====* */
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
 }
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-list {
+    list-style: none;
+}
+
+.footer {
+    padding: 70px 0;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 1.125rem;
+    color: var(--text);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: var(--primary);
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--text-gray);
+    display: block;
+    transition: all 300ms ease-out;
+}
+
+.footer-col ul li a:hover {
+    color: var(--link-hover);
+    padding-left: 8px;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 10px 10px 0 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--text-light);
+    transition: all 500ms ease-out;
+}
+
+.footer-col .social-links a:hover {
+    color: var(--text);
+    background: #FFFFFF;
+}
+
 
 /* !==== MEDIA QUERIES ====! */
 @media screen and (max-width: 950px) {
@@ -368,7 +448,7 @@ form a:hover {
     }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 915px) {
     nav {
         height: 170px;
         flex-direction: column;
@@ -394,7 +474,7 @@ form a:hover {
     }
 }
 
-@media screen and (max-width: 312px) {
+@media screen and (max-width: 363px) {
     nav {
         height: 200px;
     }
@@ -404,7 +484,7 @@ form a:hover {
     }
 }
 
-@media screen and (max-width: 296px) {
+@media screen and (max-width: 334px) {
     nav {
         height: 270px;
     }
@@ -451,4 +531,17 @@ form a:hover {
 	.login-content{
 		justify-content: center;
 	}
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
 }
