@@ -115,14 +115,18 @@ nav .nav-items .nav-item.active a:focus {
 }
 
 .showcase-img {
-    width: 16.67vw;
-    height: 16.67vw;
+    width: 20vw;
+    height: 20vw;
     aspect-ratio: 1 / 1;
 }
 
 .hero-inner {
-    max-width: 430px;
+    max-width: 760px;
     margin: 0 5vw;
+}
+
+.hero-inner.has-image {
+    max-width: 480px !important;
 }
 
 .hero-inner h1 {
@@ -182,12 +186,12 @@ button:focus {
 .conclusion {
     text-align: center;
     background: var(--conclusion-background);
-    padding: 45px;
+    padding: 60px;
     color: var(--text);
 }
 
 .conclusion h4 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 900;
     margin-bottom: 5px;
 }
@@ -195,6 +199,8 @@ button:focus {
 .conclusion svg {
     position: absolute;
     transform: translate(-50%) translateY(-25%);
+    width: 30%;
+    height: 10%;
 }
 
 
