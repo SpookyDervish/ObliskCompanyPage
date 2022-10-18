@@ -50,6 +50,7 @@ nav .brand {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav .brand img {
@@ -156,13 +157,18 @@ button:focus {
     background: var(--primary-light);
 }
 
+.subtitle {
+    color: var(--link-hover);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 .features {
     background: var(--features-background);
     padding: 45px 60px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 45px;
-    justify-content: center;
 }
 
 .featured-item {
@@ -174,9 +180,19 @@ button:focus {
     box-shadow: 0 5px 30px rgba(25, 25, 25, 0.5);
 }
 
+.featured-item .header {
+    display: flex;
+}
+
 .featured-item h1 {
     color: #4545af;
     margin: 10px 0;
+    width: 65%;
+}
+
+.featured-item img {
+    width: 7.5vw;
+    height: 7.5vw;
 }
 
 .featured-item p {
@@ -435,6 +451,37 @@ form a:hover {
 
 
 /* !==== MEDIA QUERIES ====! */
+@media (max-width: 1401px) {
+    .featured-item img {
+        width: 6.5vw;
+        height: 6.5vw;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1220px)  {
+    .featured-item .header {
+        flex-direction: column;
+    }
+
+    .featured-item img {
+        width: 10vw;
+        height: 10vw;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .featured-item h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .featured-item img {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .hero {
         flex-direction: column;
@@ -465,8 +512,22 @@ form a:hover {
         justify-content: center;
     }
 
+    nav .brand {
+        margin-bottom: 20px;
+    }
+
     body {
         margin-top: 170px;
+    }
+}
+
+@media (max-width: 465px) {
+    nav {
+        height: 210px;
+    }
+
+    body {
+        margin-top: 210px;
     }
 }
 
@@ -480,23 +541,23 @@ form a:hover {
     }
 }
 
-@media screen and (max-width: 363px) {
+@media screen and (max-width: 424px) {
     nav {
-        height: 200px;
+        height: 230px;
     }
 
     body {
-        margin-top: 200px;
+        margin-top: 230px;
     }
 }
 
-@media screen and (max-width: 334px) {
+@media screen and (max-width: 314px) {
     nav {
-        height: 270px;
+        height: 300px;
     }
 
     body {
-        margin-top: 270px;
+        margin-top: 300px;
     }
 }
 
